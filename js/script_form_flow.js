@@ -591,6 +591,20 @@ class Init {
   static boot() {
     window.App = new VehicleAssessmentApp();
     App.init();
+
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest("#auth_btn");
+
+      if (!btn) return;
+
+      const activeFlow = localStorage.getItem("flow-selected");
+
+      if (activeFlow === "SCRAP") {
+        window.location.href = "/scrap_resale_value.html?step=4&sub=value";
+      } else {
+        window.location.href = "/estimate_resale_value.html?step=4&sub=value";
+      }
+    });
   }
 }
 

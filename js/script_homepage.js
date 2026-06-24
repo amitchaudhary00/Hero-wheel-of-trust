@@ -511,3 +511,16 @@ document.addEventListener("DOMContentLoaded", () => {
     buildSlides([DESKTOP_IMAGE]);
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrapBtn = document.querySelector(".btn-scrap");
+  const sellBtn = document.querySelector(".btn-sell");
+
+  scrapBtn.addEventListener("click", () => {
+    localStorage.setItem("flow-selected", "SCRAP");
+  });
+
+  sellBtn.addEventListener("click", () => {
+    localStorage.setItem("flow-selected", "SELL");
+  });
+});
