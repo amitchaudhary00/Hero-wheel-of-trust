@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Wheels of Trust – Best Two-Wheeler Resale Value</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style_homepage.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container-xl nav-inner">
+          <!-- Brand Left: Wheels of Trust -->
+          <a class="navbar-brand brand-wot" href="#">
+            <img
+              src="/assets/home/logo.png"
+              alt="Wheels of Trust logo"
+              class="brand-icon"
+            />
+          </a>
+
+          <!-- Center: Hero Logo -->
+          <a class="navbar-brand brand-hero mx-auto" href="#">
+            <img src="/assets/home/logo_main.png" alt="Hero" />
+          </a>
+
+          <!-- Right controls -->
+          <div class="nav-right d-flex align-items-center gap-lg-3 gap-1">
+            <a href="#" class="nav-faq d-none d-lg-inline">FAQs</a>
+            <button
+              id="openLanguageSwitcher"
+              class="btn lang-switcher d-flex align-items-center gap-1"
+            >
+              <span class="flag"> <img src="/assets/home/globe.svg" alt="" /> </span>
+              <span class="fw-bold">EN</span>
+              <span class="arrow-down">▾</span>
+            </button>
+            <button
+              class="navbar-toggler d-lg-none border-0 px-1"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mobileMenu"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero-section" aria-label="Hero banner">
+        <!-- <div class="hero-overlay d-md-block d-none"></div> -->
+        <div class="banner-content">
+          <h1>Your two-wheeler’s best resale value​</h1>
+          <p>Find out your bike’s estimated value in 30 seconds​</p>
+        </div>
+        <div>
+          <div class="banner-image">
+            <div class="pointer-dots">
+              <div class="dot_outline">
+                <div class="dot_fill"></div>
+              </div>
+            </div>
+            <!-- <img src="/assets/home/banner.png" alt="" /> -->
+          </div>
+          <div class="instant-valuation-form">
+            <!-- Valuation Card -->
+            <aside class="valuation-card" aria-label="Get instant valuation form">
+              <h2 class="val-title">Get Instant Valuation</h2>
+              <p class="val-sub">Fill in your vehicle details below</p>
+
+              <form class="val-form" novalidate>
+                <div class="row g-2 mb-2">
+                  <!-- STATE -->
+                  <div class="col-6">
+                    <div class="cs-field">
+                      <label id="label-state">State <span class="req">*</span></label>
+                      <div class="cs-wrap" id="w-state">
+                        <button
+                          type="button"
+                          class="cs-trigger"
+                          id="trigger-state"
+                          aria-haspopup="listbox"
+                          aria-expanded="false"
+                          aria-labelledby="label-state trigger-state"
+                        >
+                          <span class="cs-trigger-text">Select State</span>
+                          <span class="cs-trigger-icon chevron" aria-hidden="true">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                              <path
+                                d="M2 4l4 4 4-4"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                        <ul
+                          class="cs-dropdown"
+                          role="listbox"
+                          aria-labelledby="label-state"
+                        >
+                          <li>
+                            <button
+                              class="cs-option is-placeholder"
+                              role="option"
+                              aria-selected="false"
+                              data-value=""
+                            >
+                              <span class="cs-option-label">Select State</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="cs-option"
+                              role="option"
+                              aria-selected="false"
+                              data-value="Delhi"
+                            >
+                              <span class="cs-option-label">Delhi</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="cs-option"
+                              role="option"
+                              aria-selected="false"
+                              data-value="Haryana"
+                            >
+                              <span class="cs-option-label">Haryana</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="cs-option"
+                              role="option"
+                              aria-selected="false"
+                              data-value="Maharashtra"
+                            >
+                              <span class="cs-option-label">Maharashtra</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="cs-option"
+                              role="option"
+                              aria-selected="false"
+                              data-value="Karnataka"
+                            >
+                              <span class="cs-option-label">Karnataka</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="cs-option"
+                              role="option"
+                              aria-selected="false"
+                              data-value="Tamil Nadu"
+                            >
+                              <span class="cs-option-label">Tamil Nadu</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- CITY -->
+                  <div class="col-6">
+                    <div class="cs-field">
+                      <label id="label-city">City <span class="req">*</span></label>
+                      <div class="cs-wrap" id="w-city">
+                        <button
+                          type="button"
+                          class="cs-trigger"
+                          id="trigger-city"
+                          aria-haspopup="listbox"
+                          aria-expanded="false"
+                          aria-labelledby="label-city trigger-city"
+                        >
+                          <span class="cs-trigger-text">Select City</span>
+                          <span class="cs-trigger-icon chevron" aria-hidden="true">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                              <path
+                                d="M2 4l4 4 4-4"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                        <ul
+                          class="cs-dropdown"
+                          id="city-list"
+                          role="listbox"
+                          aria-labelledby="label-city"
+                        >
+                          <li>
+                            <button
+                              class="cs-option is-placeholder"
+                              role="option"
+                              aria-selected="false"
+                              data-value=""
+                            >
+                              <span class="cs-option-label">Select City</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- TWO-WHEELER TYPE -->
+                <fieldset class="mb-2">
+                  <legend class="form-label form-label--req">
+                    Select Two-Wheeler Type
+                  </legend>
+                  <div class="type-toggle">
+                    <button
+                      type="button"
+                      class="type-btn type-btn--active"
+                      aria-pressed="true"
+                    >
+                      Motorcycle
+                    </button>
+                    <button type="button" class="type-btn" aria-pressed="false">
+                      Scooter
+                    </button>
+                    <button type="button" class="type-btn" aria-pressed="false">
+                      Moped
+                    </button>
+                  </div>
+                </fieldset>
+
+                <div class="row g-2 mb-2">
+                  <!-- COMPANY -->
+                  <div class="col-6">
+                    <div class="cs-field">
+                      <label id="label-company">Company <span class="req">*</span></label>
+                      <div class="cs-wrap" id="w-company">
+                        <button
+                          type="button"
+                          class="cs-trigger"
+                          id="trigger-company"
+                          aria-haspopup="listbox"
+                          aria-expanded="false"
+                          aria-labelledby="label-company trigger-company"
+                        >
+                          <span class="cs-trigger-text">Select Company</span>
+                          <span class="cs-trigger-icon chevron" aria-hidden="true">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                              <path
+                                d="M2 4l4 4 4-4"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                        <ul
+                          class="cs-dropdown"
+                          role="listbox"
+                          aria-labelledby="label-company"
+                        >
+                          <li>
+                            <button
+                              class="cs-option is-placeholder"
+                              role="option"
+                              aria-selected="false"
+                              data-value=""
+                            >
+                              <span class="cs-option-label">Select Company</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="cs-option"
+                              role="option"
+                              aria-selected="false"
+                              data-value="Hero"
+                            >
+                              <span class="cs-option-label">Hero</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="cs-option"
+                              role="option"
+                              aria-selected="false"
+                              data-value="Honda"
+                            >
+                              <span class="cs-option-label">Honda</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="cs-option"
+                              role="option"
+                              aria-selected="false"
+                              data-value="Bajaj"
+                            >
+                              <span class="cs-option-label">Bajaj</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="cs-option"
+                              role="option"
+                              aria-selected="false"
+                              data-value="TVS"
+                            >
+                              <span class="cs-option-label">TVS</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="cs-option"
+                              role="option"
+                              aria-selected="false"
+                              data-value="Suzuki"
+                            >
+                              <span class="cs-option-label">Suzuki</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- MODEL -->
+                  <div class="col-6">
+                    <div class="cs-field">
+                      <label id="label-model">Model <span class="req">*</span></label>
+                      <div class="cs-wrap" id="w-model">
+                        <button
+                          type="button"
+                          class="cs-trigger"
+                          id="trigger-model"
+                          aria-haspopup="listbox"
+                          aria-expanded="false"
+                          aria-labelledby="label-model trigger-model"
+                        >
+                          <span class="cs-trigger-text">Select Model</span>
+                          <span class="cs-trigger-icon chevron" aria-hidden="true">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                              <path
+                                d="M2 4l4 4 4-4"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                        <ul
+                          class="cs-dropdown"
+                          id="model-list"
+                          role="listbox"
+                          aria-labelledby="label-model"
+                        >
+                          <li>
+                            <button
+                              class="cs-option is-placeholder"
+                              role="option"
+                              aria-selected="false"
+                              data-value=""
+                            >
+                              <span class="cs-option-label">Select Model</span>
+                              <svg
+                                class="cs-option-check"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                              >
+                                <circle cx="8" cy="8" r="7.5" fill="#22c55e" />
+                                <path
+                                  d="M4.5 8.5l2.5 2.5 4.5-5"
+                                  stroke="#fff"
+                                  stroke-width="1.6"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- REGISTRATION DATE -->
+                <div class="mb-3">
+                  <label for="regDate" class="form-label form-label--req">
+                    Registration Month &amp; Year
+                  </label>
+                  <input
+                    type="date"
+                    id="regDate"
+                    class="form-control form-control-sm"
+                    placeholder="MM / YYYY"
+                    required
+                  />
+                </div>
+
+                <!-- ACTIONS -->
+                <div class="val-actions d-flex gap-2">
+                  <a
+                    href="/vehicle_condition.html?for=sell_vehicle"
+                    class="btn btn-sell flex-grow-1"
+                  >
+                    Sell Vehicle
+                  </a>
+                  <a
+                    href="/vehicle_condition.html?for=scrap_vehicle&step=2"
+                    class="btn btn-scrap flex-grow-1"
+                  >
+                    Scrap Vehicle
+                  </a>
+                </div>
+              </form>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXCHANGE SECTION -->
+      <section
+        class="exchange-section"
+        aria-label="Exchange two-wheeler at best resale price"
+      >
+        <div class="container-xl">
+          <div class="row align-items-center gy-4">
+            <div class="col-sm-5">
+              <figure class="collage" aria-hidden="true">
+                <img src="/assets/home/exchange.png" alt="" />
+              </figure>
+            </div>
+            <div class="exchange-content col-sm-7">
+              <h2 class="section-heading">
+                Exchange Two-Wheeler At Best<br />Resale Price
+              </h2>
+              <p class="section-body">
+                Sell two-wheeler in a simple and hassle-free manner. Rely on Hero's Wheels
+                Of Trust to check used two-wheeler resale value and get the best price to
+                sell and exchange seamlessly.
+              </p>
+              <a href="#" class="btn btn-primary-red">Know more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW WE CALCULATE -->
+      <section class="calculate-section" aria-label="How we calculate your value">
+        <div class="container-xl">
+          <header class="section-header text-center">
+            <h2 class="calc-heading">
+              How We Calculate Your <span class="text-red">Value</span>
+            </h2>
+            <p class="calc-sub">
+              Three factors — no black box, no surprises. Your estimate is generated in
+              real time.
+            </p>
+          </header>
+
+          <div class="factors-card">
+            <div class="row g-0">
+              <article class="col-md-4 factor-item factor-item--white">
+                <span class="factor-num" aria-hidden="true">1</span>
+                <h3 class="factor-title">Vehicle Age &amp; Registration</h3>
+                <p class="factor-body">
+                  Older vehicles depreciate faster. We factor in the exact registration
+                  month and year
+                </p>
+              </article>
+              <article class="col-md-4 factor-item factor-item--red">
+                <span class="factor-num" aria-hidden="true">2</span>
+                <h3 class="factor-title">Brand, Model &amp; Variant</h3>
+                <p class="factor-body">
+                  Resale value varies by brand and model demand. Hero models hold better
+                  value than less popular brands
+                </p>
+              </article>
+              <article class="col-md-4 factor-item factor-item--white">
+                <span class="factor-num" aria-hidden="true">3</span>
+                <h3 class="factor-title">Location &amp; Market Demand</h3>
+                <p class="factor-body">
+                  Prices differ by city — metro markets fetch 8–12% more. We use your
+                  state and city to apply the right local market pricing automatically.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCRAP SECTION -->
+      <section class="scrap-section" aria-label="Scrapping your old two-wheeler">
+        <div class="container-xl">
+          <div class="row align-items-center gy-4">
+            <div class="col-sm-5">
+              <figure class="collage" aria-hidden="true">
+                <img src="/assets/home/exchange.png" alt="" />
+              </figure>
+            </div>
+            <div class="scrap-content col-sm-7">
+              <h2 class="scrap-heading">
+                Scrapping your old two-wheeler<br />is easier than ever.
+              </h2>
+              <p class="section-body">
+                Just check the scrap value online, visit the nearest Hero dealership along
+                with KYC documents. Get it scrapped instantly and enjoy multiple benefits!
+              </p>
+              <a href="#" class="btn btn-primary-red">Know more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED MODELS -->
+      <section class="models-section" aria-labelledby="models-title">
+        <div class="models-section-header">
+          <p class="eyebrow-tag d-lg-inline-block d-none">FEATURED MODELS</p>
+          <h2 class="section-title" id="models-title">
+            <p class="d-none d-lg-block">
+              Popular Hero Models for <span class="highlight">Exchange</span>
+            </p>
+            <p class="d-lg-none d-block">Popular Hero Models</p>
+          </h2>
+        </div>
+
+        <div class="models-scroll-track" role="list">
+          <!-- Destini 125 -->
+          <article class="model-card shadow-sm">
+            <div class="model-img-wrap" aria-label="Hero Destini 125 scooter image">
+              <img src="/assets/home/destini_bike.png" alt="destini bike" />
+            </div>
+            <div class="model-card-body">
+              <p class="model-name">Hero Destini 125</p>
+              <p class="model-price">Starting ₹76,000</p>
+              <ul class="model-features">
+                <li>125cc Engine</li>
+                <li>LED Headlamps</li>
+                <li>Digital Console</li>
+              </ul>
+              <a href="#" class="btn-exchange-now">Exchange Now</a>
+            </div>
+          </article>
+
+          <!-- Xpulse 200 -->
+          <article class="model-card shadow-sm">
+            <div class="model-img-wrap" aria-label="Hero Xpulse 200 motorcycle image">
+              <img src="/assets/home/xpulse_bike.png" alt="xpulse bike" />
+            </div>
+            <div class="model-card-body">
+              <p class="model-name">Hero Xpulse 200</p>
+              <p class="model-price">Starting ₹1,33,000</p>
+              <ul class="model-features">
+                <li>200cc Engine</li>
+                <li>Adventure Ready</li>
+                <li>Long Travel Suspension</li>
+              </ul>
+              <a href="#" class="btn-exchange-now">Exchange Now</a>
+            </div>
+          </article>
+
+          <!-- Splendor Plus -->
+          <article class="model-card shadow-sm">
+            <div class="model-img-wrap" aria-label="Hero Splendor Plus motorcycle image">
+              <img src="/assets/home/splendor_bike.png" alt="splendor bike" />
+            </div>
+            <div class="model-card-body">
+              <p class="model-name">Hero Splendor Plus</p>
+              <p class="model-price">Starting ₹68,000</p>
+              <ul class="model-features">
+                <li>100cc Engine</li>
+                <li>Fuel Efficient</li>
+                <li>Low Maintenance</li>
+              </ul>
+              <a href="#" class="btn-exchange-now">Exchange Now</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="footer-inner">
+        <div
+          class="footer-logos d-flex justify-content-center align-items-center gap-lg-4 gap-2 mb-3"
+        >
+          <a href="#" class="footer-wot">
+            <img src="/assets/home/logo_main.png" alt="" class="footer-hero-img" />
+          </a>
+          <span class="divider"></span>
+          <a href="#" class="footer-wot d-flex align-items-center gap-1">
+            <img src="/assets/home/logo.png" alt="Wheels of Trust" />
+          </a>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul
+            class="footer-links d-flex justify-content-center flex-wrap gap-sm-3 gap-0 list-unstyled mb-1"
+          >
+            <li><a href="#">Sell</a></li>
+            <li><a href="#">Exchange</a></li>
+            <li><a href="#">Scrap</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </nav>
+        <p class="footer-copy text-center">
+          For copyright details, check with concerned teams
+        </p>
+      </div>
+    </footer>
+
+    <div id="languageModal" class="language-modal-overlay">
+      <div class="language-modal">
+        <button class="language-close" id="closeLanguageModal">✕</button>
+
+        <h2>Select Language</h2>
+        <p>Select your preferred language to proceed</p>
+
+        <div class="language-grid">
+          <button class="language-card" data-lang="English">
+            <span class="radio"></span>
+            English
+          </button>
+
+          <button class="language-card" data-lang="Hindi">
+            <span class="radio"></span>
+            हिन्दी
+          </button>
+
+          <button class="language-card" data-lang="Tamil">
+            <span class="radio"></span>
+            தமிழ்
+          </button>
+
+          <button class="language-card" data-lang="Telugu">
+            <span class="radio"></span>
+            తెలుగు
+          </button>
+
+          <button class="language-card" data-lang="Marathi">
+            <span class="radio"></span>
+            मराठी
+          </button>
+
+          <button class="language-card" data-lang="Kannada">
+            <span class="radio"></span>
+            ಕನ್ನಡ
+          </button>
+
+          <button class="language-card" data-lang="Bengali">
+            <span class="radio"></span>
+            বাংলা
+          </button>
+
+          <button class="language-card" data-lang="Gujarati">
+            <span class="radio"></span>
+            ગુજરાતી
+          </button>
+        </div>
+
+        <!-- <button class="language-submit" id="languageProceed" disabled>
+          Proceed To Next
+        </button> -->
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script_homepage.js"></script>
+  </body>
+</html>

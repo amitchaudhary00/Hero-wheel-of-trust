@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Assessment | Hero × Wheels of Trust</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="/style_form_flow.css" />
+  </head>
+  <body>
+    <!-- ======================== HEADER ======================== -->
+    <!-- NAVBAR -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container-xl nav-inner">
+          <!-- Brand Left: Wheels of Trust -->
+          <a class="navbar-brand brand-wot" href="#">
+            <img
+              src="/assets/home/logo.png"
+              alt="Wheels of Trust logo"
+              class="brand-icon"
+            />
+          </a>
+
+          <!-- Center: Hero Logo -->
+          <a class="navbar-brand brand-hero mx-auto" href="#">
+            <img src="/assets/home/logo_main.png" alt="Hero" />
+          </a>
+
+          <!-- Right controls -->
+          <div class="nav-right d-flex align-items-center gap-lg-3 gap-1">
+            <a href="#" class="nav-faq d-none d-lg-inline">FAQs</a>
+            <button
+              id="openLanguageSwitcher"
+              class="btn lang-switcher d-flex align-items-center gap-1"
+            >
+              <span class="flag"> <img src="/assets/home/globe.svg" alt="" /> </span>
+              <span class="fw-bold">EN</span>
+              <span class="arrow-down">▾</span>
+            </button>
+            <button
+              class="navbar-toggler d-lg-none border-0 px-1"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mobileMenu"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =================== MOBILE PROGRESS =================== -->
+    <div class="mobile-progress d-lg-none m-3 shadow-sm" id="mobileProgress">
+      <div class="m-steps-track">
+        <div class="m-dot active" data-mdot="1">1</div>
+        <div class="m-line" data-mline="1"></div>
+        <div class="m-dot pending" data-mdot="2">2</div>
+        <div class="m-line" data-mline="2"></div>
+        <div class="m-dot pending" data-mdot="3">3</div>
+        <div class="m-line" data-mline="3"></div>
+        <div class="m-dot pending" data-mdot="4">4</div>
+      </div>
+      <div class="m-label" id="mobileLabel">
+        Step <strong>1</strong> of 4 — <strong>Vehicle Details</strong>
+      </div>
+    </div>
+
+    <!-- ======================== MAIN ======================== -->
+    <main class="assessment-main">
+      <!-- Desktop sidebar -->
+      <section>
+        <aside class="assessment-sidebar d-none d-lg-flex flex-column">
+          <div class="sidebar-card">
+            <h2 class="sidebar-heading">Vehicle Assessment</h2>
+            <p class="sidebar-subheading">
+              Follow these steps to complete your valuation
+            </p>
+            <ul class="stepper-list" id="desktopStepper">
+              <li class="stepper-item s-active" data-si="1">
+                <div class="s-circle">
+                  <span class="s-num">1</span><i class="bi bi-check s-check"></i>
+                </div>
+                <div class="s-info">
+                  <div class="s-label">Vehicle details</div>
+                  <div class="s-desc">Tell us about your vehicle</div>
+                </div>
+              </li>
+              <li class="stepper-item s-pending" data-si="2">
+                <div class="s-circle">
+                  <span class="s-num">2</span><i class="bi bi-check s-check"></i>
+                </div>
+                <div class="s-info">
+                  <div class="s-label">Vehicle condition</div>
+                  <div class="s-desc">Answer a few questions</div>
+                </div>
+              </li>
+              <li class="stepper-item s-pending" data-si="3">
+                <div class="s-circle">
+                  <span class="s-num">3</span><i class="bi bi-check s-check"></i>
+                </div>
+                <div class="s-info">
+                  <div class="s-label">Unlock price</div>
+                  <div class="s-desc">Answer a few details</div>
+                </div>
+              </li>
+              <li class="stepper-item s-pending" data-si="4">
+                <div class="s-circle">
+                  <span class="s-num">4</span><i class="bi bi-check s-check"></i>
+                </div>
+                <div class="s-info">
+                  <div class="s-label">Valuation</div>
+                  <div class="s-desc">Receive your vehicle cost</div>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Product cards shown only at step 4-centre -->
+            <div class="sidebar-products d-none-custom" id="sidebarProducts">
+              <div class="prod-card">
+                <img
+                  src="https://placehold.co/72x50/1A1F3C/FFFFFF?text=Bike"
+                  alt="Glamour X"
+                  class="prod-thumb"
+                />
+                <div>
+                  <div class="prod-name">GLAMOUR X</div>
+                  <div class="prod-explore">Explore More →</div>
+                </div>
+              </div>
+              <div class="prod-card">
+                <img
+                  src="https://placehold.co/72x50/1A1F3C/FFFFFF?text=Bike"
+                  alt="Glamour X"
+                  class="prod-thumb"
+                />
+                <div>
+                  <div class="prod-name">GLAMOUR X</div>
+                  <div class="prod-explore">Explore More →</div>
+                </div>
+              </div>
+              <div class="prod-card">
+                <img
+                  src="https://placehold.co/72x50/1A1F3C/FFFFFF?text=Bike"
+                  alt="Glamour X"
+                  class="prod-thumb"
+                />
+                <div>
+                  <div class="prod-name">GLAMOUR X</div>
+                  <div class="prod-explore">Explore More →</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Blogs Section -->
+        <div class="sidebar-blog-wrap d-none-custom d-none d-lg-block" id="sidebarBlog">
+          <p class="sidebar-blog-lbl">Blogs</p>
+          <div class="sb-blog-card" id="sbBlogCard">
+            <img src="/assets/home/blog_img.png" alt="Blog" class="sb-blog-img" />
+            <div class="sb-blog-body">
+              <p class="sb-blog-title">
+                Save Big on Hero Bikes with Exchange Offers on Wheels Of Trust
+              </p>
+              <p class="sb-blog-date">31 Mar 2026</p>
+            </div>
+          </div>
+          <div class="sidebar-c-dots">
+            <button class="sidebar-c-dot on" data-sbi="0"></button>
+            <button class="sidebar-c-dot" data-sbi="1"></button>
+            <button class="sidebar-c-dot" data-sbi="2"></button>
+          </div>
+        </div>
+      </section>
+      <!-- Steps wrapper -->
+      <div class="steps-wrapper">
+        <section class="step-panel" id="step-4-value" data-step="4" data-sub="value">
+          <h1 class="step-h1">
+            Here is the estimated <span class="accent">Scrap Value</span> of your
+            two-wheeler
+          </h1>
+
+          <div class="scrap-main-grid">
+            <!-- Left: Scrap Value + Benefits -->
+            <div>
+              <div class="scrap-price-card">
+                <div class="scrap-bike-name">TVS XL BS6</div>
+                <div>2017 • NG</div>
+                <div class="val-price">₹ 10,000</div>
+              </div>
+              <div class="additional-info">
+                <div class="scrap-info-banner">
+                  <i class="bi bi-info-circle-fill"></i>
+                  <span
+                    >Don't stop at ₹4,104! Unlock additional benefits on the purchase of a
+                    new Hero two-wheeler.</span
+                  >
+                </div>
+
+                <div class="benefits-title">Additional Benefits</div>
+
+                <table class="benefits-table shadow-sm">
+                  <tbody>
+                    <tr>
+                      <td>Scrap Value</td>
+                      <td>₹4,104*</td>
+                    </tr>
+                    <tr>
+                      <td>Rebate on Road Tax ^</td>
+                      <td id="benefitRoadTax">
+                        <span class="locked-val"
+                          ><i class="bi bi-lock-fill"></i> Select new model to
+                          unlock*</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Green Discount *</td>
+                      <td id="benefitGreenDiscount">
+                        <span class="locked-val"
+                          ><i class="bi bi-lock-fill"></i> Select new model to
+                          unlock*</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="benefits-disclaimer">
+                  * All listed benefits and discounts are estimates, for exact pricing
+                  kindly connect with the dealership.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right: Hero Model Selection -->
+            <div class="row gap-md-0 gap-2">
+              <!-- Interested Model -->
+              <div class="col-md-7 model-interested">
+                <p class="model-interest-title">
+                  Are you interested in purchasing a New Hero two-wheeler?
+                </p>
+                <div class="table-container">
+                  <div class="model-table-hdr">
+                    <span>Select Model</span>
+                    <span>Ex-Showroom Price*</span>
+                  </div>
+                  <div id="heroModelList">
+                    <div
+                      class="model-row sel"
+                      data-mi="0"
+                      onclick="App.modelSel.select(this)"
+                    >
+                      <div class="m-radio"></div>
+                      <span class="m-name">Glamour</span>
+                      <span class="m-price">₹87,284</span>
+                    </div>
+                    <div
+                      class="model-row"
+                      data-mi="1"
+                      onclick="App.modelSel.select(this)"
+                    >
+                      <div class="m-radio"></div>
+                      <span class="m-name">Glamour X</span>
+                      <span class="m-price">₹67,900</span>
+                    </div>
+                    <div
+                      class="model-row"
+                      data-mi="2"
+                      onclick="App.modelSel.select(this)"
+                    >
+                      <div class="m-radio"></div>
+                      <span class="m-name">HARLEY X440</span>
+                      <span class="m-price">₹60,000</span>
+                    </div>
+                    <div
+                      class="model-row"
+                      data-mi="3"
+                      onclick="App.modelSel.select(this)"
+                    >
+                      <div class="m-radio"></div>
+                      <span class="m-name">Glamour XTEC</span>
+                      <span class="m-price">₹54,000</span>
+                    </div>
+                    <div
+                      class="model-row"
+                      data-mi="4"
+                      onclick="App.modelSel.select(this)"
+                    >
+                      <div class="m-radio"></div>
+                      <span class="m-name">Glamour XTEC ×2</span>
+                      <span class="m-price">₹54,000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sale Card -->
+              <div class="col-md-5 d-lg-block d-none">
+                <div class="sale-card">
+                  <div class="content">
+                    <h3 class="text-white h4 w-75">
+                      <span class="text-red">₹5,000 OFF</span> on Hero Splendor Plus
+                    </h3>
+                    <p class="text-red small">Exchange your old bike this month →</p>
+                  </div>
+                  <img
+                    class="sale-card-img"
+                    src="/assets/home/sale_bike.png"
+                    alt="Bike for sale"
+                  />
+                  <img class="sale-card-icon" src="/assets/home/sale_icon.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bike Carousel -->
+        <section class="d-lg-none d-block my-3">
+          <div class="msc-root">
+            <!-- Track outer clips overflow -->
+            <div class="msc-track-outer">
+              <div class="msc-track" id="mscTrack">
+                <!-- SLIDE 1 — Model Selector -->
+                <div class="msc-slide">
+                  <div class="sale-card">
+                    <div class="content">
+                      <h3 class="text-white h4 w-75">
+                        <span class="text-red">₹5,000 OFF</span> on Hero Splendor Plus
+                      </h3>
+                      <p class="text-red small">Exchange your old bike this month →</p>
+                    </div>
+                    <img
+                      class="sale-card-img"
+                      src="/assets/home/sale_bike.png"
+                      alt="Bike for sale"
+                    />
+                    <img class="sale-card-icon" src="/assets/home/sale_icon.svg" alt="" />
+                  </div>
+                </div>
+
+                <!-- SLIDE 2 — Sale Card -->
+                <div class="msc-slide">
+                  <div class="sale-card">
+                    <div class="content">
+                      <h3 class="text-white h4 w-75">
+                        <span class="text-red">₹5,000 OFF</span> on Hero Splendor Plus
+                      </h3>
+                      <p class="text-red small">Exchange your old bike this month →</p>
+                    </div>
+                    <img
+                      class="sale-card-img"
+                      src="/assets/home/sale_bike.png"
+                      alt="Bike for sale"
+                    />
+                    <img class="sale-card-icon" src="/assets/home/sale_icon.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Blogs -->
+        <section class="my-3 d-lg-none d-block">
+          <h2 class="fs-5 mb-0">Blogs</h2>
+          <div class="mobile-blog">
+            <!-- Blogs Section -->
+            <div class="sidebar-blog-wrap d-block d-lg-none">
+              <div class="sb-blog-card" id="sbBlogCard">
+                <img src="/assets/home/blog_img.png" alt="Blog" class="sb-blog-img" />
+                <div class="sb-blog-body">
+                  <p class="sb-blog-title">
+                    Save Big on Hero Bikes with Exchange Offers on Wheels Of Trust
+                  </p>
+                  <p class="sb-blog-date">31 Mar 2026</p>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-blog-wrap d-block d-lg-none">
+              <!-- <p class="sidebar-blog-lbl">Blogs</p> -->
+              <div class="sb-blog-card" id="sbBlogCard">
+                <img src="/assets/home/blog_img.png" alt="Blog" class="sb-blog-img" />
+                <div class="sb-blog-body">
+                  <p class="sb-blog-title">
+                    Save Big on Hero Bikes with Exchange Offers on Wheels Of Trust
+                  </p>
+                  <p class="sb-blog-date">31 Mar 2026</p>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-blog-wrap d-block d-lg-none">
+              <!-- <p class="sidebar-blog-lbl">Blogs</p> -->
+              <div class="sb-blog-card" id="sbBlogCard">
+                <img src="/assets/home/blog_img.png" alt="Blog" class="sb-blog-img" />
+                <div class="sb-blog-body">
+                  <p class="sb-blog-title">
+                    Save Big on Hero Bikes with Exchange Offers on Wheels Of Trust
+                  </p>
+                  <p class="sb-blog-date">31 Mar 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-sec">
+          <h3 class="faq-title">FAQ's</h3>
+          <div class="faq-item open" data-fi="0">
+            <div class="faq-q">
+              What brands of two-wheelers can I exchange at Wheels of Trust?<i
+                class="faq-ico"
+                >+</i
+              >
+            </div>
+            <div class="faq-a">
+              You can exchange any two-wheeler brand, make or model. Our platform provides
+              a quick and accurate estimate regardless of the manufacturer.
+            </div>
+          </div>
+          <div class="faq-item" data-fi="1">
+            <div class="faq-q">
+              How long does it take to get a valuation for my two-wheeler?<i
+                class="faq-ico"
+                >+</i
+              >
+            </div>
+            <div class="faq-a">
+              The online valuation process takes just a few minutes. After submitting your
+              details, you'll receive an instant estimate.
+            </div>
+          </div>
+          <div class="faq-item" data-fi="2">
+            <div class="faq-q">
+              Can I exchange my old two-wheeler for a new Hero bike?<i class="faq-ico"
+                >+</i
+              >
+            </div>
+            <div class="faq-a">
+              Yes! You can exchange your old two-wheeler at any authorised Hero dealership
+              for a brand new Hero bike and enjoy exchange bonuses.
+            </div>
+          </div>
+          <div class="faq-item" data-fi="3">
+            <div class="faq-q">
+              Where can I find a dealer to complete the exchange process?<i
+                class="faq-ico"
+                >+</i
+              >
+            </div>
+            <div class="faq-a">
+              Use the dealer selection above to find the nearest authorised Hero scrapping
+              or exchange centre in your area.
+            </div>
+          </div>
+          <div class="faq-item" data-fi="4">
+            <div class="faq-q">
+              Will I get a better deal if I exchange instead of selling?<i class="faq-ico"
+                >+</i
+              >
+            </div>
+            <div class="faq-a">
+              Exchange deals often come with additional benefits like exchange bonuses and
+              special offers on new Hero bikes.
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="footer-inner">
+        <div
+          class="footer-logos d-flex justify-content-center align-items-center gap-lg-4 gap-2 mb-3"
+        >
+          <a href="#" class="footer-wot">
+            <img src="/assets/home/logo_main.png" alt="" class="footer-hero-img" />
+          </a>
+          <span class="divider"></span>
+          <a href="#" class="footer-wot d-flex align-items-center gap-1">
+            <img src="/assets/home/logo.png" alt="Wheels of Trust" />
+          </a>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul
+            class="footer-links d-flex justify-content-center flex-wrap gap-sm-3 gap-0 list-unstyled mb-1"
+          >
+            <li><a href="#">Sell</a></li>
+            <li><a href="#">Exchange</a></li>
+            <li><a href="#">Scrap</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </nav>
+        <p class="footer-copy text-center">
+          For copyright details, check with concerned teams
+        </p>
+      </div>
+    </footer>
+
+    <!-- ================== Language Modal ====================== -->
+    <div id="languageModal" class="language-modal-overlay">
+      <div class="language-modal">
+        <button class="language-close" id="closeLanguageModal">✕</button>
+
+        <h2>Select Language</h2>
+        <p>Select your preferred language to proceed</p>
+
+        <div class="language-grid">
+          <button class="language-card" data-lang="English">
+            <span class="radio"></span>
+            English
+          </button>
+
+          <button class="language-card" data-lang="Hindi">
+            <span class="radio"></span>
+            हिन्दी
+          </button>
+
+          <button class="language-card" data-lang="Tamil">
+            <span class="radio"></span>
+            தமிழ்
+          </button>
+
+          <button class="language-card" data-lang="Telugu">
+            <span class="radio"></span>
+            తెలుగు
+          </button>
+
+          <button class="language-card" data-lang="Marathi">
+            <span class="radio"></span>
+            मराठी
+          </button>
+
+          <button class="language-card" data-lang="Kannada">
+            <span class="radio"></span>
+            ಕನ್ನಡ
+          </button>
+
+          <button class="language-card" data-lang="Bengali">
+            <span class="radio"></span>
+            বাংলা
+          </button>
+
+          <button class="language-card" data-lang="Gujarati">
+            <span class="radio"></span>
+            ગુજરાતી
+          </button>
+        </div>
+
+        <!-- <button class="language-submit" id="languageProceed" disabled>
+          Proceed To Next
+        </button> -->
+      </div>
+    </div>
+    <script>
+      (function () {
+        "use strict";
+
+        /* ── CONFIG ── */
+        const SLIDE_INTERVAL = 2000; // 2s auto-rotate to match video
+        const TRANSITION_MS = 500; // matches CSS transition duration
+
+        /* ── ELEMENTS ── */
+        const track = document.getElementById("mscTrack");
+        const slides = Array.from(track.querySelectorAll(".msc-slide"));
+
+        let current = 0;
+        let timer = null;
+        let isAnimating = false;
+
+        /* ── GOTO ── */
+        function goTo(idx) {
+          if (isAnimating) return;
+          isAnimating = true;
+
+          current = (idx + slides.length) % slides.length;
+
+          // Shift track
+          track.style.transform = `translateX(-${current * 100}%)`;
+
+          setTimeout(() => {
+            isAnimating = false;
+          }, TRANSITION_MS);
+        }
+
+        /* ── AUTO ROTATE ── */
+        function startAuto() {
+          stopAuto();
+          timer = setInterval(() => goTo(current + 1), SLIDE_INTERVAL);
+        }
+
+        function stopAuto() {
+          clearInterval(timer);
+          timer = null;
+        }
+
+        /* ── MODEL ROW CLICK ── */
+        document.querySelectorAll("#heroModelList .model-row").forEach((row) => {
+          row.addEventListener("click", () => {
+            document
+              .querySelectorAll("#heroModelList .model-row")
+              .forEach((r) => r.classList.remove("sel"));
+            row.classList.add("sel");
+          });
+        });
+
+        /* ── TOUCH / SWIPE support ── */
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        track.addEventListener(
+          "touchstart",
+          (e) => {
+            touchStartX = e.touches[0].clientX;
+            stopAuto(); // pause during swipe
+          },
+          { passive: true },
+        );
+
+        track.addEventListener(
+          "touchend",
+          (e) => {
+            touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > 40) {
+              // minimum swipe distance
+              goTo(diff > 0 ? current + 1 : current - 1);
+            }
+
+            startAuto(); // resume after swipe
+          },
+          { passive: true },
+        );
+
+        /* ── Pause on hover (desktop) ── */
+        track.addEventListener("mouseenter", stopAuto);
+        track.addEventListener("mouseleave", startAuto);
+
+        /* ── INIT ── */
+        goTo(0);
+        startAuto();
+      })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="/global.js"></script> -->
+    <script src="/script_form_flow.js"></script>
+  </body>
+</html>

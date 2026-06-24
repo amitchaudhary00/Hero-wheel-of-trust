@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Assessment | Hero × Wheels of Trust</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap"
+    />
+    <!-- <link rel="stylesheet" href="/style_form_flow.css" /> -->
+    <!-- <link rel="stylesheet" href="/global.css" /> -->
+    <link rel="stylesheet" href="/style_form_flow.css" />
+  </head>
+  <body>
+    <!-- ======================== HEADER ======================== -->
+    <!-- NAVBAR -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container-xl nav-inner">
+          <!-- Brand Left: Wheels of Trust -->
+          <a class="navbar-brand brand-wot" href="#">
+            <img
+              src="/assets/home/logo.png"
+              alt="Wheels of Trust logo"
+              class="brand-icon"
+            />
+          </a>
+
+          <!-- Center: Hero Logo -->
+          <a class="navbar-brand brand-hero mx-auto" href="#">
+            <img src="/assets/home/logo_main.png" alt="Hero" />
+          </a>
+
+          <!-- Right controls -->
+          <div class="nav-right d-flex align-items-center gap-lg-3 gap-1">
+            <a href="#" class="nav-faq d-none d-lg-inline">FAQs</a>
+            <button
+              id="openLanguageSwitcher"
+              class="btn lang-switcher d-flex align-items-center gap-1"
+            >
+              <span class="flag"> <img src="/assets/home/globe.svg" alt="" /> </span>
+              <span class="fw-bold">EN</span>
+              <span class="arrow-down">▾</span>
+            </button>
+            <button
+              class="navbar-toggler d-lg-none border-0 px-1"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mobileMenu"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =================== MOBILE PROGRESS =================== -->
+    <div class="mobile-progress d-lg-none m-3 shadow-sm" id="mobileProgress">
+      <div class="m-steps-track">
+        <div class="m-dot active" data-mdot="1">1</div>
+        <div class="m-line" data-mline="1"></div>
+        <div class="m-dot pending" data-mdot="2">2</div>
+        <div class="m-line" data-mline="2"></div>
+        <div class="m-dot pending" data-mdot="3">3</div>
+        <div class="m-line" data-mline="3"></div>
+        <div class="m-dot pending" data-mdot="4">4</div>
+      </div>
+      <div class="m-label" id="mobileLabel">
+        Step <strong>1</strong> of 4 — <strong>Vehicle Details</strong>
+      </div>
+    </div>
+
+    <!-- ======================== MAIN ======================== -->
+    <main class="assessment-main">
+      <!-- Desktop sidebar -->
+      <aside class="assessment-sidebar d-none d-lg-flex flex-column">
+        <div class="sidebar-card">
+          <h2 class="sidebar-heading">Vehicle Assessment</h2>
+          <p class="sidebar-subheading">Follow these steps to complete your valuation</p>
+          <ul class="stepper-list" id="desktopStepper">
+            <li class="stepper-item s-done" data-si="1">
+              <div class="s-circle">
+                <span class="s-num">1</span><i class="bi bi-check s-check"></i>
+              </div>
+              <div class="s-info">
+                <div class="s-label">Vehicle details</div>
+                <div class="s-desc">Tell us about your vehicle</div>
+              </div>
+            </li>
+            <li class="stepper-item s-active" data-si="2">
+              <div class="s-circle">
+                <span class="s-num">2</span><i class="bi bi-check s-check"></i>
+              </div>
+              <div class="s-info">
+                <div class="s-label">Vehicle condition</div>
+                <div class="s-desc">Answer a few questions</div>
+              </div>
+            </li>
+            <li class="stepper-item s-pending" data-si="3">
+              <div class="s-circle">
+                <span class="s-num">3</span><i class="bi bi-check s-check"></i>
+              </div>
+              <div class="s-info">
+                <div class="s-label">Unlock price</div>
+                <div class="s-desc">Answer a few details</div>
+              </div>
+            </li>
+            <li class="stepper-item s-pending" data-si="4">
+              <div class="s-circle">
+                <span class="s-num">4</span><i class="bi bi-check s-check"></i>
+              </div>
+              <div class="s-info">
+                <div class="s-label">Valuation</div>
+                <div class="s-desc">Receive your vehicle cost</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Steps wrapper -->
+      <div class="steps-wrapper">
+        <!-- ============ STEP 2a: VEHICLE CONDITION ============ -->
+        <section class="step-panel active" id="step-2" data-step="2">
+          <!-- data-sub="condition" -->
+          <h1 class="step-h1">
+            Tell us about Your <span class="accent"> Vehicle Condition</span>
+          </h1>
+          <p class="step-sub">Answer these quick questions for an accurate valuation.</p>
+
+          <div class="cond-grid">
+            <!-- Left column -->
+            <div>
+              <div class="q-group">
+                <div class="q-label">Is there any smoke from the silencer?</div>
+                <div class="toggle-pair" data-tg="smoke">
+                  <div class="t-opt sel-pos" data-tv="no-smoke">
+                    <span class="t-icon"><i class="bi bi-cloud-fill"></i></span> No Smoke
+                  </div>
+                  <div class="t-opt" data-tv="smoke">
+                    <span class="t-icon"><i class="bi bi-cloud"></i></span> Smoke
+                  </div>
+                </div>
+              </div>
+              <div class="q-group">
+                <div class="q-label">Any problem in starting the vehicle?</div>
+                <div class="toggle-pair" data-tg="starting">
+                  <div class="t-opt sel-pos" data-tv="starts-ok">
+                    <span class="t-icon"
+                      ><i class="bi bi-lightning-charge-fill"></i
+                    ></span>
+                    Starts Normally
+                  </div>
+                  <div class="t-opt" data-tv="not-starting">
+                    <span class="t-icon"><i class="bi bi-lightning-charge"></i></span> Not
+                    Starting
+                  </div>
+                </div>
+              </div>
+              <div class="q-group">
+                <div class="q-label">Lights &amp; indicators working fine?</div>
+                <div class="toggle-pair" data-tg="lights">
+                  <div class="t-opt sel-pos" data-tv="working">
+                    <span class="t-icon"><i class="bi bi-lightbulb-fill"></i></span>
+                    Working
+                  </div>
+                  <div class="t-opt" data-tv="not-working">
+                    <span class="t-icon"><i class="bi bi-lightbulb"></i></span> Not
+                    Working
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Right column -->
+            <div>
+              <div class="q-group">
+                <div class="q-label">What is the condition of the front tyre?</div>
+                <div class="toggle-pair" data-tg="front-tyre">
+                  <div class="t-opt" data-tv="good">
+                    <span class="t-icon"><i class="bi bi-circle-fill"></i></span> Good
+                  </div>
+                  <div class="t-opt sel-neg" data-tv="worn-out">
+                    <span class="t-icon"><i class="bi bi-circle"></i></span> Worn out
+                    /Cracks/Puncture
+                  </div>
+                </div>
+              </div>
+              <div class="q-group">
+                <div class="q-label">What is the condition of the rear tyre?</div>
+                <div class="toggle-pair" data-tg="rear-tyre">
+                  <div class="t-opt" data-tv="good">
+                    <span class="t-icon"><i class="bi bi-circle-fill"></i></span> Good
+                  </div>
+                  <div class="t-opt sel-neg" data-tv="worn-out">
+                    <span class="t-icon"><i class="bi bi-circle"></i></span> Worn out
+                    Cracks/Puncture
+                  </div>
+                </div>
+              </div>
+              <div class="q-group">
+                <div class="q-label">What is the condition of the body parts?</div>
+                <div class="toggle-pair" data-tg="body">
+                  <div class="t-opt" data-tv="no-damage">
+                    <span class="t-icon"><i class="bi bi-shield-fill"></i></span> No
+                    Damage
+                  </div>
+                  <div class="t-opt sel-neg" data-tv="damage">
+                    <span class="t-icon"><i class="bi bi-shield"></i></span>
+                    Scratch/Dent/Cracks
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-footer d-none d-sm-flex">
+            <a href="/homepage.html" class="btn-back">
+              <!-- js navigation -->
+              <!-- onclick="App.stepper.prev()" -->
+              <i class="bi bi-chevron-left"></i> Back
+            </a>
+            <a href="/authenticate.html?step=3" class="btn-primary-action">
+              <!-- js navigation -->
+              <!-- onclick="App.stepper.next()" -->
+              Next <i class="bi bi-chevron-right"></i>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="footer-inner">
+        <div
+          class="footer-logos d-flex justify-content-center align-items-center gap-lg-4 gap-2 mb-3"
+        >
+          <a href="#" class="footer-wot">
+            <img src="/assets/home/logo_main.png" alt="" class="footer-hero-img" />
+          </a>
+          <span class="divider"></span>
+          <a href="#" class="footer-wot d-flex align-items-center gap-1">
+            <img src="/assets/home/logo.png" alt="Wheels of Trust" />
+          </a>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul
+            class="footer-links d-flex justify-content-center flex-wrap gap-sm-3 gap-0 list-unstyled mb-1"
+          >
+            <li><a href="#">Sell</a></li>
+            <li><a href="#">Exchange</a></li>
+            <li><a href="#">Scrap</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </nav>
+        <p class="footer-copy text-center">
+          For copyright details, check with concerned teams
+        </p>
+      </div>
+    </footer>
+
+    <!-- ==================== Navigation buttons ====================== -->
+    <div class="step-footer d-flex d-sm-none">
+      <a href="/homepage.html" class="btn-back">
+        <!-- js navigation -->
+        <!-- onclick="App.stepper.prev()" -->
+        <i class="bi bi-chevron-left"></i> Back
+      </a>
+      <a href="/authenticate.html?step=3" class="btn-primary-action">
+        <!-- js navigation -->
+        <!-- onclick="App.stepper.next()" -->
+        Next <i class="bi bi-chevron-right"></i>
+      </a>
+    </div>
+    <!-- ================== Language Modal ====================== -->
+    <div id="languageModal" class="language-modal-overlay">
+      <div class="language-modal">
+        <button class="language-close" id="closeLanguageModal">✕</button>
+
+        <h2>Select Language</h2>
+        <p>Select your preferred language to proceed</p>
+
+        <div class="language-grid">
+          <button class="language-card" data-lang="English">
+            <span class="radio"></span>
+            English
+          </button>
+
+          <button class="language-card" data-lang="Hindi">
+            <span class="radio"></span>
+            हिन्दी
+          </button>
+
+          <button class="language-card" data-lang="Tamil">
+            <span class="radio"></span>
+            தமிழ்
+          </button>
+
+          <button class="language-card" data-lang="Telugu">
+            <span class="radio"></span>
+            తెలుగు
+          </button>
+
+          <button class="language-card" data-lang="Marathi">
+            <span class="radio"></span>
+            मराठी
+          </button>
+
+          <button class="language-card" data-lang="Kannada">
+            <span class="radio"></span>
+            ಕನ್ನಡ
+          </button>
+
+          <button class="language-card" data-lang="Bengali">
+            <span class="radio"></span>
+            বাংলা
+          </button>
+
+          <button class="language-card" data-lang="Gujarati">
+            <span class="radio"></span>
+            ગુજરાતી
+          </button>
+        </div>
+
+        <!-- <button class="language-submit" id="languageProceed" disabled>
+          Proceed To Next
+        </button> -->
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="/global.js"></script> -->
+    <!-- <script src="/script_vehicle_condition.js"></script> -->
+    <script src="/script_form_flow.js"></script>
+  </body>
+</html>
