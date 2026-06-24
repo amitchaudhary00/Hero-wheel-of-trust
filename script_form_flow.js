@@ -347,7 +347,7 @@ class ThankYouModal {
     document.body.style.overflow = "";
     // Return to step 1
     window.App.stepper.goTo(2, null);
-    window.location.href = "/homepage.html";
+    window.location.href = "/index.html";
   }
 }
 
