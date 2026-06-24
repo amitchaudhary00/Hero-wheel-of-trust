@@ -309,6 +309,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("preferredLanguage")) {
     modal.classList.add("language-modal-hidden");
     return;
+  } else {
+    modal.classList.remove("language-modal-hidden");
   }
 
   // proceedBtn.addEventListener("click", () => {
